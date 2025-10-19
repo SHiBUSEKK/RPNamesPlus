@@ -2,7 +2,6 @@
 using Exiled.API.Features;
 using Exiled.Events.EventArgs.Player;
 using PlayerRoles;
-using UnityEngine;
 
 namespace RPNamesPlus
 {
@@ -11,7 +10,7 @@ namespace RPNamesPlus
         public override string Author => "Shibusekk";
         public override string Name => "RPNames+";
         public override string Prefix => "RPNames+";
-        public override Version Version => new Version(1, 0, 0);
+        public override Version Version => new Version(1, 0, 1);
         public override Version RequiredExiledVersion => new Version(9, 9, 2);
 
 
@@ -19,11 +18,13 @@ namespace RPNamesPlus
         {
             Exiled.Events.Handlers.Player.ChangingRole += OnChangingRole;
             Log.Info("RPNames+ has been enabled. Thank you for using my plugin.");
+            base.OnEnabled();
         }
 
         public override void OnDisabled()
         {
             Exiled.Events.Handlers.Player.ChangingRole -= OnChangingRole;
+            base.OnDisabled();
         }
 
         private void OnChangingRole(ChangingRoleEventArgs ev)

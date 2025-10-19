@@ -66,6 +66,10 @@
     <Reference Include="LabApi, Version=1.1.2.0, Culture=neutral, processorArchitecture=AMD64">
       <HintPath>..\packages\ExMod.Exiled.9.9.2\lib\net48\LabApi.dll</HintPath>
     </Reference>
+    <Reference Include="Mirror, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SCPContainmentMethods\packages\Other\Mirror.dll</HintPath>
+    </Reference>
     <Reference Include="NorthwoodLib, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ExMod.Exiled.9.9.2\lib\net48\NorthwoodLib.dll</HintPath>
     </Reference>
@@ -88,6 +92,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\shownamecommand.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="RPNames+.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
