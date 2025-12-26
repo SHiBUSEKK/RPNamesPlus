@@ -1,5 +1,6 @@
-﻿using System.Collections.Generic;
-using Exiled.API.Interfaces;
+﻿using Exiled.API.Interfaces;
+using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace RPNamesPlus
 {
@@ -11,10 +12,12 @@ namespace RPNamesPlus
 
     public class Config : IConfig
     {
+        [Description("Enables or disables the plugin.")]
         public bool IsEnabled { get; set; } = true;
+        [Description("Enables or disables debug mode for the plugin.")]
         public bool Debug { get; set; } = false;
-
-        public Dictionary<string, RoleNamePool> RPNamesPlus { get; set; } = new()
+        [Description("List of all possible RPNames for every role and prefixes.")]
+        public Dictionary<string, RoleNamePool> rpnamesplus { get; set; } = new()
         {
             { "Scientist", new RoleNamePool { Prefix = "Dr. ", Names = new List<string>{
                 "Smith", "Johnson", "Brown", "Taylor", "Anderson", "Clark", "Wright", "Harris"

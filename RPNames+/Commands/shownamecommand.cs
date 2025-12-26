@@ -3,7 +3,7 @@ using System;
 using LabApi.Features.Wrappers;
 
 [CommandHandler(typeof(ClientCommandHandler))]
-public class shownameCommand : ICommand
+public class shownamecommand : ICommand
 {
     public bool Execute(ArraySegment<string> arguments, ICommandSender sender, out string response)
     {
