@@ -5,12 +5,12 @@ using PlayerRoles;
 
 namespace RPNamesPlus
 {
-    public class RPNamesPlus : Plugin<Config>
+    public class RPNamesPlus : Plugin<Config, Translation>
     {
         public override string Author => "Shibusekk";
         public override string Name => "RPNames+";
         public override string Prefix => "RPNames+";
-        public override Version Version => new Version(1, 0, 2);
+        public override Version Version => new Version(1, 1, 0);
         public override Version RequiredExiledVersion => new Version(9, 9, 2);
 
         public override void OnEnabled()
@@ -48,10 +48,10 @@ namespace RPNamesPlus
                 return;
             }
 
-            if (!Config.rpnamesplus.ContainsKey(roleName))
+            if (!Translation.rpnames.ContainsKey(roleName))
                 return;
 
-            var roleConfig = Config.rpnamesplus[roleName];
+            var roleConfig = Translation.rpnames[roleName];
             if (roleConfig.Names == null || roleConfig.Names.Count == 0)
                 return;
 
